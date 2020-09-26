@@ -10,6 +10,7 @@ services:
       - 8111:8111
   teamcity-agent:
     image: jetbrains/teamcity-agent:latest
+    user: root
     environment:
       - DOCKER_IN_DOCKER=start
       - SERVER_URL=http://192.168.1.5:8111
